@@ -216,3 +216,32 @@ input{
     background: #FFFFFF;
     border: 1px solid black;
 }
+
+.sidebar-page{
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.sidebar-page:hover{
+    border-left-color: #FFFFFF;
+    border-left-width: 1px;
+}
+
+.page-img{
+    display: flex;
+    width: 20px;
+    align-self: center;
+    margin-left: 32px;
+    margin-right: 24px;
+}
+
+.page-name{
+    color: #FFFFFF;
+}
+
+.dash-icon-div-top{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
