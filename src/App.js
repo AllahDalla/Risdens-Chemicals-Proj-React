@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import SignIn from "./components/sign-in"
+import Footer from "./components/sign-in-footer"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default function App(){
+    const [darkMode, setDarkMode] = React.useState(false)
+    
+    function switchTheme(){
+        setDarkMode((prev) => !prev)
+    }
+    
+    const styles = darkMode ? {background:'#093545'} : {background:'#E5E5E5', }
+    return(
+        <div className="main" style={styles}>
+            <SignIn darkMode={darkMode} />
+            <Footer  toggle={switchTheme}/>    
+        </div>
+    )
 }
-
-export default App;
