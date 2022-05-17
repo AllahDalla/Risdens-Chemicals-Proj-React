@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, Outlet, useNavigate} from 'react-router-dom'
 import Data from './data'
 
 
@@ -7,15 +8,18 @@ export default function SignIn(props){
         username: "",
         password: "",
         checked: false,
-        incorrectPassword: true
+        incorrectPassword: true,
         })
 
+    const navigate = useNavigate()
+    
     function authorize(){
         for(let x=0; x < Data.length; x++){
             if(formstate.username === Data[x].username && formstate.password === Data[x].password){
                 setFormState((prev) => ({
                     ...prev, incorrectPassword:true
                 }))
+                navigate('/dashboard')
                 return
             }
         }
@@ -23,7 +27,6 @@ export default function SignIn(props){
             ...prev, incorrectPassword: false
         }))
     }
-        
     function handleClick(){
         setFormState((prev) => ({...prev, checked:!formstate.checked}))
     }
@@ -36,7 +39,6 @@ export default function SignIn(props){
     
     function handleChange(event){
         const {name,type,value} = event.target
-        // console.log(name, type, value)
         setFormState((prev) => ({
             ...prev, [name]:value
         }))
@@ -63,7 +65,9 @@ export default function SignIn(props){
                     <span className="remember-me-txt" onClick={handleClick} style={darkModeWhite}> Remember me </span>  
                     <span className="forgot-password" style={darkModeGreen}> Forgot password? </span>
                 </div>
-                <div className="login-btn" onClick={authorize} style={darkModeWhite}> Login </div> 
+                <div className="login-btn" onClick={authorize} style={darkModeWhite}>
+                    Login
+                </div> 
             </form>   
         </div>
     )

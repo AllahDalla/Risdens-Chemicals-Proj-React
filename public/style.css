@@ -185,7 +185,6 @@ input{
 }
 
 .main-content{
-    border: 1px dotted red;
     width: 100%;
     background: #E5E5E5;
 }
@@ -208,13 +207,18 @@ input{
 }
 
 .main-info{
-    height: 80%;
+    height: 78%;
     width: 85%;
-    margin-top: 54px;
+    margin-top: 44px;
     margin-left: auto;
     margin-right: auto;
     background: #FFFFFF;
+    overflow-y: scroll;
     border: 1px solid black;
+}
+
+.main-info::-webkit-scrollbar{
+    display: none;
 }
 
 .sidebar-page{
@@ -244,4 +248,97 @@ input{
     display: flex;
     align-items: center;
     height: 100px;
+}
+
+/* Stock item styling inside main info as a table  */
+
+.stock-item-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    margin-bottom: 7px;
+    border-bottom: 2px solid #E5E5E5;
+}
+
+.stock-item-header > h3{
+    font-size: 17px;
+    font-weight: 200;
+    font-family: lexend Deca;
+    width: 70px;
+    max-height: 70px;
+    cursor:default;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.stock-item-header > h3:hover{
+    border-bottom-width: 10px;
+    border-bottom: 0.5px solid #224957;
+}
+
+/* .header-status{
+    margin-left: 35px;
+    margin-right: 14px;
+}
+*/
+
+.header-id{
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.header-name{
+    margin-left: 70px;
+    margin-right: 0px;
+}
+
+.header-supplier{
+    margin-left: 35px;
+    margin-right: 50px;
+}
+
+.header-quantity{
+    margin-left: -25px;
+    margin-right: 0px;
+}
+
+.header-price{
+    margin-right: 15px;
+}
+
+.header-total{
+    margin-right: 15px;
+}
+
+.stock-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 200;
+    font-family: lexend Deca;
+    border-bottom: 2px solid #E5E5E5;
+}
+
+.stock-item:hover{
+   background-color: aliceblue;
+}
+
+.stock-item > p {
+    display: flex;
+    max-width: 70px;
+    max-height: 70px;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+
+
+.stock-img{
+    display: flex;
+    align-self: center;
+    width: 20px;
+    cursor: default;
 }
