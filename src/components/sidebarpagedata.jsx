@@ -1,14 +1,11 @@
 const pages = [
-    {id:1,
-      name: 'Manage Stock',
-    url: '../images/manage-stock-icon.png'},
- {id:2,
+ {id:1,
    name:'Manage Order',
     url: '../images/manage-order-icon.png'},
-  {id:3,
+  {id:2,
     name:'Settings',
     url: '../images/settings-icon.png'}, 
-  {id:4,
+  {id:3,
     name:'Logout',
     url: '../images/logout-icon.png'}]
 

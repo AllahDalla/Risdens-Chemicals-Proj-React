@@ -14,8 +14,13 @@ const icons = [
     {
         name:'black',
         url:'../images/stock-icon-black.png'
+    },
+    {
+        name:'info',
+        url:'../images/stock-icon-more-info.png'
     }
 
 ]
+
 
 export {icons}

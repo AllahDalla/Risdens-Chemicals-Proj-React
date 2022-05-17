@@ -11,6 +11,8 @@ export default function SignIn(props){
         incorrectPassword: true,
         })
 
+    
+
     const navigate = useNavigate()
     
     function authorize(){
@@ -30,6 +32,8 @@ export default function SignIn(props){
     function handleClick(){
         setFormState((prev) => ({...prev, checked:!formstate.checked}))
     }
+
+    
 
     
     const styles = formstate.checked ?  {background:'transparent', borderWidth:'0.5px'} : {background:'#224957'}

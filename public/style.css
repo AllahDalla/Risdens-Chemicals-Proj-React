@@ -193,10 +193,36 @@ input{
     display: flex;
     width: 100%;
     align-items: center;
+    border-bottom: 2px solid grey;
+    justify-content: space-around;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    height: 60px;
+}
+
+.search-img{
+    margin-top: 15px;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.search-input{
+    margin-bottom: 20px;
+    width: 130px;
+    height: 30px;
+}
+
+.search-cancel{
+    margin-top: 15px;
+    margin-left: 5px;
 }
 
 .main-heading-title{
-    margin-right: auto;
     margin-left: 30px;
     margin-top: 30px;
 }
@@ -214,7 +240,6 @@ input{
     margin-right: auto;
     background: #FFFFFF;
     overflow-y: scroll;
-    border: 1px solid black;
 }
 
 .main-info::-webkit-scrollbar{
@@ -225,6 +250,7 @@ input{
     display: flex;
     align-items: center;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .sidebar-page:hover{
@@ -252,93 +278,39 @@ input{
 
 /* Stock item styling inside main info as a table  */
 
-.stock-item-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+table{
+    border-collapse: collapse;
+
+}
+
+table td, table th{
+    text-align: center;
+    font-family: lexend Deca;
+    font-style: normal;
+}
+
+th{
+    background-color: #272CB9;
+    padding: 15px 15px;
+    color: #FFFFFF;
     position: sticky;
-    margin-bottom: 7px;
-    border-bottom: 2px solid #E5E5E5;
-}
-
-.stock-item-header > h3{
-    font-size: 17px;
-    font-weight: 200;
-    font-family: lexend Deca;
-    width: 70px;
-    max-height: 70px;
-    cursor:default;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s;
-}
-
-.stock-item-header > h3:hover{
-    border-bottom-width: 10px;
-    border-bottom: 0.5px solid #224957;
-}
-
-/* .header-status{
-    margin-left: 35px;
-    margin-right: 14px;
-}
-*/
-
-.header-id{
-    margin-left: 15px;
-    margin-right: 0px;
-}
-
-.header-name{
-    margin-left: 70px;
-    margin-right: 0px;
-}
-
-.header-supplier{
-    margin-left: 35px;
-    margin-right: 50px;
-}
-
-.header-quantity{
-    margin-left: -25px;
-    margin-right: 0px;
-}
-
-.header-price{
-    margin-right: 15px;
-}
-
-.header-total{
-    margin-right: 15px;
-}
-
-.stock-item{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 200;
-    font-family: lexend Deca;
-    border-bottom: 2px solid #E5E5E5;
-}
-
-.stock-item:hover{
-   background-color: aliceblue;
-}
-
-.stock-item > p {
-    display: flex;
-    max-width: 70px;
-    max-height: 70px;
-    justify-content: center;
-    align-items: center;
     cursor: default;
 }
 
-
-
-.stock-img{
-    display: flex;
-    align-self: center;
-    width: 20px;
-    cursor: default;
+td{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5E5E5;
+    cursor: pointer;
 }
+
+tbody tr:hover{
+    background-color: aliceblue;
+}
+
+.more-info-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
