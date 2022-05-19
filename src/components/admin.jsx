@@ -14,7 +14,21 @@ export default function Admin(){
             />
         )
     })
+
+    const [searchInput, setSearchInput] = React.useState('')
     
+    function handleSearchInputEvent(event){
+        setSearchInput(()=>{ 
+            let {value} = event.target
+            return (value)
+            
+        })
+    }
+
+    function handleClickCancel(){
+        setSearchInput('')
+    }
+
 
     return (
         <div className='admin-dash'>
@@ -29,13 +43,18 @@ export default function Admin(){
                     <h2 className='main-heading-title'>Dashboard</h2>
                     <div className='search'>
                         <img className='search-img' src='../images/search-icon.png' alt='search icon'/>
-                        <input className='search-input' type='text' placeholder='search...' />
-                        <div className='search-cancel'>cancel</div>
+                        <input name='search-input' className='search-input' type='text' placeholder='search...' 
+                        value={searchInput}
+                        onChange={handleSearchInputEvent}
+                        />
+                        <div className='search-cancel' onClick={handleClickCancel}>cancel</div>
                     </div>
                     <h2 className='main-heading-user'>User: A.Davis</h2>
                 </div>
                 <div className='main-info'>
-                    <Table />
+                    <Table  
+                    input={searchInput}
+                    />
                 </div>
             </div>
         </div>

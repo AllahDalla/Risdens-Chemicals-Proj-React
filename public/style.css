@@ -193,7 +193,7 @@ input{
     display: flex;
     width: 100%;
     align-items: center;
-    border-bottom: 2px solid grey;
+    /* border-bottom: 2px solid grey; */
     justify-content: space-around;
 }
 
@@ -220,6 +220,7 @@ input{
 .search-cancel{
     margin-top: 15px;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .main-heading-title{
