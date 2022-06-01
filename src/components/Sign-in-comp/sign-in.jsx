@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Outlet, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import Data from './data'
 
 
@@ -42,7 +42,7 @@ export default function SignIn(props){
     const darkModeGreen = props.darkMode ? {color:'#20DF7F'} : {color:'#224957'}
     
     function handleChange(event){
-        const {name,type,value} = event.target
+        const {name,value} = event.target
         setFormState((prev) => ({
             ...prev, [name]:value
         }))

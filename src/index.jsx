@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from "./app"
+import Landing from "./components/Sign-in-comp/landing"
 import Admin from './components/admin'
+
+
 
 
 
@@ -12,8 +14,9 @@ const root = ReactDOM.createRoot(doc)
 root.render(
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<App />}></Route>
+            <Route path='/' element={<Landing />}></Route>
             <Route path='dashboard' element={<Admin />}></Route>
         </Routes>
     </BrowserRouter>
 )
+

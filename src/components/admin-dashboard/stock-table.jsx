@@ -140,6 +140,8 @@ export default function Item(props){
                             total='N/A'
                             icon={icons} 
                         />
+    const tableStyle= localStorage.getItem('theme') ? {width:'100%', backgroundColor:'#e5e5e5', transition:'backgroundColor 2s'} :
+    {width:'100%', backgroundColor:'#FFFFFF', transition:'backgroundColor 2s'}
 
     return (
         <table style={{width:'100%'}}>
