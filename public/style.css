@@ -188,6 +188,7 @@ input{
 .main-content{
     width: 100%;
     transition: background-color 2s;
+    border: 1px solid green;
 }
 
 .main-heading{

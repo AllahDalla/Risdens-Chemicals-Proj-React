@@ -125,7 +125,8 @@ export default function Item(props){
             quantity={data.quantity}
             price={data.price}
             total={data.total}
-            icon={icons} 
+            icon={icons}
+            setPath= {props.setPath} 
         />)
     } )
 
@@ -139,6 +140,7 @@ export default function Item(props){
                             price='N/A'
                             total='N/A'
                             icon={icons} 
+                            setPath= {props.setPath} 
                         />
     const tableStyle= localStorage.getItem('theme') ? {width:'100%', backgroundColor:'#e5e5e5', transition:'backgroundColor 2s'} :
     {width:'100%', backgroundColor:'#FFFFFF', transition:'backgroundColor 2s'}
