@@ -13,6 +13,7 @@ export default function SignIn(props){
 
     
 
+    
     const navigate = useNavigate()
     
     function authorize(){
@@ -21,6 +22,7 @@ export default function SignIn(props){
                 setFormState((prev) => ({
                     ...prev, incorrectPassword:true
                 }))
+                sessionStorage.setItem("username", formstate.username)
                 navigate('/dashboard')
                 return
             }

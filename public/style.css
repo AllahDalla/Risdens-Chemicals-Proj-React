@@ -188,7 +188,6 @@ input{
 .main-content{
     width: 100%;
     transition: background-color 2s;
-    border: 1px solid green;
 }
 
 .main-heading{
@@ -376,3 +375,48 @@ tbody tr:hover{
     justify-content: space-evenly;
 }
 
+
+
+/* Settings Page styling begins here */
+
+.settings-header-div{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    height: 5%;
+}
+
+.settings-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.21%;
+    color: #FFFFFF;
+    font-family: lexend Deca;
+    font-weight: 300;
+    font-size: 14px;
+    background-color: #35678d;
+    cursor: pointer;
+}
+
+@keyframes header-hover{
+    0%{
+        background: linear-gradient(15deg, rgba(34,73,87,1) 0%, rgba(32,158,223,1) 50%, rgba(34,73,87,1) 100%);
+    }
+
+    50%{
+        background: linear-gradient(30deg, rgba(34,73,87,1) 0%, rgba(32,158,223,1) 50%, rgba(34,73,87,1) 100%);
+    }
+
+    100%{
+        background: linear-gradient(45deg, rgba(34,73,87,1) 0%, rgba(32,158,223,1) 50%, rgba(34,73,87,1) 100%);
+    }
+}
+
+.settings-header:hover{
+    transform: translateY(5px);
+    /* background: rgb(34,73,87); */
+    animation: header-hover 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    transition: transform 0.3s ease-in-out;
+}

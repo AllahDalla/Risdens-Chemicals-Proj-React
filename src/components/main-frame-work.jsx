@@ -7,6 +7,7 @@ import PageData from './admin-dashboard/sidebarpagedata'
 import Page from './admin-dashboard/sidebarpage'
 import Table from './admin-dashboard/stock-table'
 import Admin from './admin-dashboard/admin'
+import Settings from './settings-dashboard/settings-page'
 
 
 
@@ -75,7 +76,7 @@ export default function FrameWork(){
                                         setPath={setPath}
                                     /> )
         
-            case '/settings':return(<div>I am the settings page</div>)
+            case '/settings':return(<Settings />)
             
             default:return(<div>This is the default settings</div>)
         }

@@ -6,6 +6,7 @@ import Table from './stock-table'
 
 
 export default function Admin(props){
+    let username = sessionStorage.getItem("username")
     return(
         <div className='main-content' style={props.darkModeDark}>
             <div className='main-heading' style={props.darkModeWhite}>
@@ -32,7 +33,7 @@ export default function Admin(props){
                 onClick={props.handleDarkMode}
                 style={{marginLeft:'15px'}}
                 />
-                <h2 className='main-heading-user'>User: A.Davis</h2>
+                <h2 className='main-heading-user'>User: {username}</h2>
             </div>
             <div className='main-info' style={props.darkMode ? {backgroundColor:'#e5e5e5'} : {backgroundColor:'#FFFFFF'}}>
                 <Table  
