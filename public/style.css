@@ -475,6 +475,7 @@ tbody tr:hover{
 
 .labels{
     margin-right: 5px;
+    width: 30px;
     font-family: lexend Deca;
     font-size: 15px;
     font-weight: 100;

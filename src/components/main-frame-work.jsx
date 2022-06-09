@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate, useParams} from 'react-router-dom'
+import {useNavigate, useParams, useLocation} from 'react-router-dom'
 import {Link} from 'react-router-dom';
 
 
@@ -35,6 +35,10 @@ export default function FrameWork(){
 
 
     const navigate = useNavigate()
+
+    function getQueryString(){
+        
+    }
     
     function handleSearchInputEvent(event){
         setSearchInput(()=>{ 

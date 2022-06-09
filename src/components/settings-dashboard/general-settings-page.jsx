@@ -1,6 +1,23 @@
 import React from 'react'
 
 export default function GeneralSettings(){
+    const [createUser, setCreateUser] = React.useState({
+        roles: '',
+        username: '',
+        password: '',
+        email: '',
+        phone: ''
+    })
+
+    function handleOnChangeEvent(event){
+        const {name,value} = event.target
+        setCreateUser((prev)=> ({
+            ...prev, [name]:value
+        }))
+
+    }
+
+
     return (
         <div className='general-settings-div'>
             <div className='create-user-div'>
@@ -11,20 +28,20 @@ export default function GeneralSettings(){
                 <div className='create-user-input-div'>
                     <div className='create-user-input-section-div'>
                         <label id='select-roles-label' htmlFor="roles" className='labels'>Choose role :</label>
-                        <select name='roles' id='select-role'>
+                        <select name='roles' id='select-role' onChange={handleOnChangeEvent}>
                             <option value='Admin'>Administrator</option>
                             <option value='Cashier'>Cashier</option>
                         </select>
                         <label htmlFor="username" className='labels'>Username :</label>
-                        <input type='text' placeholder='username . . . ' name='username' className='create-user-inputs'/>
+                        <input type='text' placeholder='username . . . ' name='username' className='create-user-inputs' onChange={handleOnChangeEvent}/>
                         <label htmlFor="pwd" className='labels'>Password :</label>
-                        <input type='password' placeholder='password . . . ' name='pwd' className='create-user-inputs'/>
+                        <input type='password' placeholder='password . . . ' name='pwd' className='create-user-inputs' onChange={handleOnChangeEvent}/>
                     </div>
                     <div className='create-user-input-section-div'>
                         <label htmlFor="email" className='labels'>Email :</label>
-                        <input type='email' placeholder='xxx@gmail.com' name='email' className='create-user-inputs'/>
+                        <input type='email' placeholder='xxx@gmail.com' name='email' className='create-user-inputs' onChange={handleOnChangeEvent}/>
                         <label htmlFor="phone" className='labels'>Phone :</label>
-                        <input type='number' placeholder='x(xxx)xxx-xxxx' name='phone' className='create-user-inputs'/>
+                        <input type='number' placeholder='x(xxx)xxx-xxxx' name='phone' className='create-user-inputs' onChange={handleOnChangeEvent}/>
                     </div>
                 </div>
                 <div className='create-user-button-div'>

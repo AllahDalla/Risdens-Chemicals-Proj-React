@@ -1,6 +1,7 @@
 import React from 'react'
 
 import GeneralSettings from './general-settings-page'
+import GenerateProduct from './generate-product-page'
 
 
 
@@ -8,8 +9,8 @@ import GeneralSettings from './general-settings-page'
 
 export default function Settings(){
 
-    const [click1, setClick1] = React.useState(true)
-    const [click2, setClick2] = React.useState(false)
+    const [click1, setClick1] = React.useState(false)
+    const [click2, setClick2] = React.useState(true)
     const [click3, setClick3] = React.useState(false)
 
     function handleOnClickHeader(event){
@@ -47,7 +48,7 @@ export default function Settings(){
 
             case 'General': return(<GeneralSettings />)
                 
-            case 'Generate Product': return(<div>I am the generate product settings page</div>)
+            case 'Generate Product': return(<GenerateProduct />)
 
             case 'Product Details': return(<div>I am the product details settings page</div>)
         
