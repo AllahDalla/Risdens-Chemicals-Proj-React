@@ -1,12 +1,14 @@
 import React from 'react'
 
+import GeneralSettings from './general-settings-page'
+
 
 
 
 
 export default function Settings(){
 
-    const [click1, setClick1] = React.useState(false)
+    const [click1, setClick1] = React.useState(true)
     const [click2, setClick2] = React.useState(false)
     const [click3, setClick3] = React.useState(false)
 
@@ -28,6 +30,29 @@ export default function Settings(){
         }
            
        
+    }
+
+
+    function renderSettingsPage(){
+        let pageHeader = ''
+        if(click1){
+            pageHeader = 'General'
+        }else if(click2){
+            pageHeader = 'Generate Product'
+        }else if(click3){
+            pageHeader = 'Product Details'
+        }
+
+        switch (pageHeader) {
+
+            case 'General': return(<GeneralSettings />)
+                
+            case 'Generate Product': return(<div>I am the generate product settings page</div>)
+
+            case 'Product Details': return(<div>I am the product details settings page</div>)
+        
+            default: return(<div>I am the default settings page</div>)
+        }
     }
 
     document.addEventListener('keydown', (event) => {
@@ -63,7 +88,7 @@ export default function Settings(){
                     background: 'linear-gradient(45deg, rgba(34,73,87,1) 0%, rgba(32,158,223,1) 50%, rgba(34,73,87,1) 100%)'}
 
 
-
+    
     return (
         <div className='main-content'>
             <div className='settings-header-div'>
@@ -71,7 +96,9 @@ export default function Settings(){
                 <div className='settings-header' id='Generate Product' onClick={handleOnClickHeader} style={click2 ? styles : {transition: 'transform 0.5s ease-in-out, background 0.5s ease-in-out'}}>Generate Product</div>
                 <div className='settings-header' id='Product Details' onClick={handleOnClickHeader} style={click3 ? styles : {transition: 'transform 0.5s ease-in-out, background 0.5s ease-in-out'}}>Product Details</div>
             </div>
-            <div className='settings-main-info-div'></div>
+            <div className='settings-main-info-div'>
+                {renderSettingsPage()}
+            </div>
 
         </div>
     )

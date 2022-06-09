@@ -420,3 +420,100 @@ tbody tr:hover{
     animation-fill-mode: forwards;
     transition: transform 0.3s ease-in-out;
 }
+
+/* The different settings pages are styled here */
+
+.general-settings-div{
+    width: 100%;
+    height: 95%;
+    margin-top: 0px;
+    background-color: #FFFFFF;
+    /* border: 1px solid #FFFFFF; */
+    overflow-y: scroll;
+}
+
+.create-user-div{
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 9px 9px;
+    width: 85%;
+    box-shadow: 3px 3px 3px 3px #E5E5E5;
+    border: 3px solid #E5E5E5;
+    border-radius: 5px;
+}
+
+.create-user-header{
+    display: flex;
+    align-content: center;
+    border-bottom: 3px solid #E5E5E5;
+}
+
+.create-user-img{
+    display: flex;
+    width: 35px;
+    align-self: center;
+    margin-left: 7px;
+}
+
+.create-user-header-text{
+    margin-left: 7px;
+    color: #355a79;
+    font-family: lexend Deca;
+    font-size: 18px;
+    font-weight: 300;
+
+}
+
+.create-user-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-user-input-section-div{
+   margin-bottom: 25px;
+}
+
+.labels{
+    margin-right: 5px;
+    font-family: lexend Deca;
+    font-size: 15px;
+    font-weight: 100;
+    color: #355a79;
+}
+
+#select-role{
+    margin-right: 40px;
+}
+
+.create-user-inputs{
+    height: 28px;
+    width: 170px;
+    margin-right: 40px;
+}
+
+.create-user-button-div{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+/* #create-user-cancel-btn{
+    margin-right: 9px;
+    border-radius: 5px;
+    background-color: #b30000;
+    color: #FFFFFF;
+    font-family: lexend Deca;
+    font-size: 14px;
+    font-weight: 200;
+} */
+
+#create-user-create-btn{
+    margin-right: 15px;
+    border-radius: 5px;
+    width: 130px;
+    background-color: #35678d;
+    color: #FFFFFF;
+    font-family: lexend Deca;
+    font-size: 14px;
+    font-weight: 200;
+}
