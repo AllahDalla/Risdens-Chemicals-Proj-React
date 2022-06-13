@@ -17,7 +17,7 @@ export default function MoreInfo(props){
     const navigate = useNavigate()
     function handleClickMoreInfo(){
         props.setPath(`/settings`)
-        navigate('/settings?id='+props.ID+'&supp='+props.supplier+'&prod='+props.product+'&quantity='+props.quantity+'&price'+props.price+'&tot='+props.total)
+        navigate('/settings?id='+props.ID+'&supp='+props.supplier+'&prod='+props.product+'&quantity='+props.quantity+'&price='+props.price+'&tot='+props.total)
 
     }
 

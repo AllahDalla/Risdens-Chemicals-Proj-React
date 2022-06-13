@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate, useParams, useLocation} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom';
 
 
@@ -8,6 +8,7 @@ import Page from './admin-dashboard/sidebarpage'
 import Table from './admin-dashboard/stock-table'
 import Admin from './admin-dashboard/admin'
 import Settings from './settings-dashboard/settings-page'
+import GetQueryString from './settings-dashboard/getQueryString';
 
 
 
@@ -36,9 +37,7 @@ export default function FrameWork(){
 
     const navigate = useNavigate()
 
-    function getQueryString(){
-        
-    }
+    GetQueryString() 
     
     function handleSearchInputEvent(event){
         setSearchInput(()=>{ 
