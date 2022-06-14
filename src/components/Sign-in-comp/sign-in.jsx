@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
-import Data from './data'
+import GetAuthorized from './data'
 
 
 export default function SignIn(props){
@@ -17,16 +17,18 @@ export default function SignIn(props){
     const navigate = useNavigate()
     
     function authorize(){
-        for(let x=0; x < Data.length; x++){
-            if(formstate.username === Data[x].username && formstate.password === Data[x].password){
-                setFormState((prev) => ({
-                    ...prev, incorrectPassword:true
-                }))
-                sessionStorage.setItem("username", formstate.username)
-                navigate('/dashboard')
-                return
-            }
+        GetAuthorized(formstate)
+
+        if(false){
+            setFormState((prev) => ({
+                ...prev, incorrectPassword:true
+            }))
+            sessionStorage.setItem("username", formstate.username)
+            
+            navigate('/dashboard')
+            return
         }
+        
         setFormState((prev) => ({
             ...prev, incorrectPassword: false
         }))

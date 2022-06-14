@@ -9,8 +9,8 @@ import GenerateProduct from './generate-product-page'
 
 export default function Settings(){
 
-    const [click1, setClick1] = React.useState(false)
-    const [click2, setClick2] = React.useState(true)
+    const [click1, setClick1] = React.useState(true)
+    const [click2, setClick2] = React.useState(false)
     const [click3, setClick3] = React.useState(false)
 
     function handleOnClickHeader(event){
