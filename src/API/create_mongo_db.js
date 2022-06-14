@@ -3,13 +3,13 @@ const env = require('dotenv')
 
 env.config()
 const mongoClient = mongodb.MongoClient
-var url = process.env.URI
-console.log(url)
+var uri = process.env.URI
+console.log(uri)
 
-// mongoClient.connect(url, (err, db)=>{
-//     if(err){
-//         throw err
-//     }
-//     console.log('Database created')
-//     db.close()
-// })
+mongoClient.connect(uri, (err, db)=>{
+    if(err){
+        throw err
+    }
+    console.log('Database created')
+    db.close()
+})
