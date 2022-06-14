@@ -14,5 +14,5 @@ server.get('/', (req, res)=>{
 })
 
 server.listen(process.env.PORT, ()=> {
-    console.log("api listening on port 8000")
+    console.log("api listening on port "+ process.env.PORT)
 })

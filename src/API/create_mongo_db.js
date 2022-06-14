@@ -9,7 +9,7 @@ mongoClient.connect(uri, (err, db)=>{
     if(err){
         throw err
     }
-    var dbo = db.db('risden')
+    var dbo = db.db(process.env.DB_NAME)
     var firstobj = {name:'xxxxxxx', age:21, email:'xxxxxxxxx'}
     dbo.collection("Customers").insertOne(firstobj, (err, res)=>{
         if (err){
