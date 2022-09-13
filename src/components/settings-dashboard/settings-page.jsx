@@ -9,9 +9,39 @@ import GenerateProduct from './generate-product-page'
 
 export default function Settings(){
 
+    //use this after navigating to settings page, to determine which header to open in general settings page, whether product details or generate new product
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('sp');
+   
+    
+
+    // const [settingsPath, setSettingsPath] = React.useState(myParam)
     const [click1, setClick1] = React.useState(true)
     const [click2, setClick2] = React.useState(false)
     const [click3, setClick3] = React.useState(false)
+
+    
+
+    if(myParam != null){
+
+        if(myParam === 'prod_details'){ //Product Details
+            setClick1(false)
+            setClick2(false)    
+            setClick3(true) 
+            
+        }else if(myParam === 'gen_prod'){ //Generate Product
+            setClick1(false)
+            setClick2(true)
+            setClick3(false) 
+        }else{ // General
+            setClick1(true)
+            setClick2(false)    
+            setClick3(false) 
+        }
+           
+        
+    }
+
 
     function handleOnClickHeader(event){
         let element = event.target

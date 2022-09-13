@@ -59,7 +59,7 @@ export default function FrameWork(){
 
     function handleAddItemImg(){
         setPath('/settings')
-        navigate('/settings')
+        navigate('/settings?sp=gen_prod')
     }
 
     function handleSwitchBetweenPages(){
